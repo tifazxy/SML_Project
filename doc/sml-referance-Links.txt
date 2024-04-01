@@ -1,0 +1,158 @@
+1.
+https://ieeexplore.ieee.org/document/9334020
+@INPROCEEDINGS{9334020,
+  author={RAZA, Mansoor and Jayasinghe, Nathali Dilshani and Muslam, Muhana Magboul Ali},
+  booktitle={2021 International Conference on Information Networking (ICOIN)}, 
+  title={A Comprehensive Review on Email Spam Classification using Machine Learning Algorithms}, 
+  year={2021},
+  volume={},
+  number={},
+  pages={327-332},
+  keywords={Support vector machines;Machine learning algorithms;Unsolicited e-mail;Machine learning;Feature extraction;Information filters;Classification algorithms;Spam Detection;Spam Classification;Spam Filter;E-mail;Supervised Learning;Machine Learning Algorithms;Email Classification;Spam Email Detection;Email Categorization;Email Feature Set Analysis;Spam Detection Using Machine Learning Algorithms},
+  doi={10.1109/ICOIN50884.2021.9334020}}
+
+2.
+https://ieeexplore.ieee.org/document/8260935
+@INPROCEEDINGS{8260935,
+  author={Alurkar, Aakash Atul and Ranade, Sourabh Bharat and Joshi, Shreeya Vijay and Ranade, Siddhesh Sanjay and Sonewar, Piyush A. and Mahalle, Parikshit N. and Deshpande, Arvind V.},
+  booktitle={2017 Internet of Things Business Models, Users, and Networks}, 
+  title={A proposed data science approach for email spam classification using machine learning techniques}, 
+  year={2017},
+  volume={},
+  number={},
+  pages={1-5},
+  keywords={Classification algorithms;Electronic mail;Information filters;Filtering algorithms;Algorithm design and analysis;Mathematical model;Email Classification;Spam;Ham;Spam Filter;Features;Spam Detection;Email Client;Ambiguous Output;Email Structure},
+  doi={10.1109/CTTE.2017.8260935}}
+
+3.
+https://ieeexplore.ieee.org/document/9905110
+@INPROCEEDINGS{9905110,
+  author={Dinendra, Harsha and Rajapakse, Chathura and Dinesh Asanka, P. P. G.},
+  booktitle={2022 International Research Conference on Smart Computing and Systems Engineering (SCSE)}, 
+  title={Personalized Classification of Non-Spam Emails Using Machine Learning Techniques}, 
+  year={2022},
+  volume={5},
+  number={},
+  pages={171-177},
+  keywords={Machine learning algorithms;Unsolicited e-mail;Computational modeling;Support vector machine classification;Electronic mail;Classification algorithms;Decision trees;logistic regression;non-spam email classification;Random Forest algorithms;supervised learning;Support Vector Machines},
+  doi={10.1109/SCSE56529.2022.9905110}}
+
+4.
+https://ieeexplore.ieee.org/document/10073758
+@INPROCEEDINGS{10073758,
+  author={Sesha Sai Krishna Vineeth, Gubba V and Leela Venkata Sai, Macharla and Mahesh, Malireddi Uma and Varun, Masani and Shanmugapriya, S.},
+  booktitle={2023 Third International Conference on Artificial Intelligence and Smart Energy (ICAIS)}, 
+  title={Email Spam: A New Strategy of Screening Spam Emails using Natural Language Processing}, 
+  year={2023},
+  volume={},
+  number={},
+  pages={710-715},
+  keywords={Support vector machines;Machine learning algorithms;Automation;Unsolicited e-mail;Manuals;Machine learning;Learning (artificial intelligence);Email Spam;Classification;Machine Learning Algorithms;NLTK – Natural Language Tool Kit},
+  doi={10.1109/ICAIS56108.2023.10073758}}
+
+5.
+https://ieeexplore.ieee.org/document/10421467
+@INPROCEEDINGS{10421467,
+  author={Datta, Subrata and Bandyopadhyay, Shaon and Mondal, Bappaditya},
+  booktitle={2023 International Conference on Integrated Intelligence and Communication Systems (ICIICS)}, 
+  title={Classification of Spam and Ham Emails with Machine Learning Techniques for Cyber Security}, 
+  year={2023},
+  volume={},
+  number={},
+  pages={1-6},
+  keywords={Support vector machines;Communication systems;Unsolicited e-mail;Machine learning;Feature extraction;Security;Computer crime;spam;ham;email;machine learning;TF-IDF;cyber security},
+  doi={10.1109/ICIICS59993.2023.10421467}}
+
+6.
+https://ieeexplore.ieee.org/document/10125624
+@INPROCEEDINGS{10125624,
+  author={Ch, Mallikarjuna Rao and S, Sahithi Reddy and Konlyada, Sathvika and Konagala, Vineela and Chenda, Vanditha Das},
+  booktitle={2023 7th International Conference on Trends in Electronics and Informatics (ICOEI)}, 
+  title={Study of Spam Email Filtering Methods using Supervised Machine Learning Techniques}, 
+  year={2023},
+  volume={},
+  number={},
+  pages={953-959},
+  keywords={Support vector machines;Unsolicited e-mail;Machine learning;Market research;Information filters;Data models;Internet;Spam email;machine learning;Naïve Bayes;Support Vector Machine},
+  doi={10.1109/ICOEI56765.2023.10125624}}
+
+7.
+https://ieeexplore.ieee.org/document/10295851
+@INPROCEEDINGS{10295851,
+  author={Fadli, Muhammad and Wijaya, Vannes and Pribadi, Muhammad Rizky and Widhiarso, Wijang},
+  booktitle={2023 10th International Conference on Electrical Engineering, Computer Science and Informatics (EECSI)}, 
+  title={Effect of TF-IDF Extraction and Application of SMOTE on Model Performance in Detecting Spam Email}, 
+  year={2023},
+  volume={},
+  number={},
+  pages={637-641},
+  keywords={Deep learning;Electrical engineering;Computer science;Unsolicited e-mail;Text categorization;Media;Feature extraction;SMOTE;TF-IDF;Naïve Bayes;K-Nearest Neighbors;Deep Learning},
+  doi={10.1109/EECSI59885.2023.10295851}}
+
+8.
+https://ieeexplore.ieee.org/document/8971582
+@INPROCEEDINGS{8971582,
+  author={Suryawanshi, Shubhangi and Goswami, Anurag and Patil, Pramod},
+  booktitle={2019 IEEE 9th International Conference on Advanced Computing (IACC)}, 
+  title={Email Spam Detection : An Empirical Comparative Study of Different ML and Ensemble Classifiers}, 
+  year={2019},
+  volume={},
+  number={},
+  pages={69-74},
+  keywords={Spam detection and classification;Machine learning Classifiers;Accuracy Measure;Voting Mechanism},
+  doi={10.1109/IACC48062.2019.8971582}}
+
+9.
+https://ieeexplore.ieee.org/document/7982300
+@INPROCEEDINGS{7982300,
+  author={Dagher, Issam and Antoun, Rima},
+  booktitle={2016 IEEE Intl Conference on Computational Science and Engineering (CSE) and IEEE Intl Conference on Embedded and Ubiquitous Computing (EUC) and 15th Intl Symposium on Distributed Computing and Applications for Business Engineering (DCABES)}, 
+  title={Ham-Spam Filtering Using Different PCA Scenarios}, 
+  year={2016},
+  volume={},
+  number={},
+  pages={542-545},
+  keywords={Principal component analysis;Vocabulary;Training;Electronic mail;Matrix decomposition;Support vector machines;Computational modeling;Ham;Spam;PCA;Bayes;SVD},
+  doi={10.1109/CSE-EUC-DCABES.2016.238}}
+
+10.
+https://ieeexplore.ieee.org/document/9014756
+@INPROCEEDINGS{9014756,
+  author={Taloba, Ahmed I. and Ismail, Safaa S. I.},
+  booktitle={2019 Ninth International Conference on Intelligent Computing and Information Systems (ICICIS)}, 
+  title={An Intelligent Hybrid Technique of Decision Tree and Genetic Algorithm for E-Mail Spam Detection}, 
+  year={2019},
+  volume={},
+  number={},
+  pages={99-104},
+  keywords={Unsolicited electronic mail;Decision trees;Feature extraction;Genetic algorithms;Principal component analysis;Machine learning;spam e-mail detection;machine learning;decision tree;genetic algorithms;hybrid technique;principle component analysis},
+  doi={10.1109/ICICIS46948.2019.9014756}}
+
+11.
+https://ieeexplore.ieee.org/document/10391682
+@INPROCEEDINGS{10391682,
+  author={Yadav, Deepak and Kaur, Er. Bhupinder},
+  booktitle={2023 Second International Conference On Smart Technologies For Smart Nation (SmartTechCon)}, 
+  title={Feature Reduction and Hybrid Machine Learning Model for Email Spam Prediction}, 
+  year={2023},
+  volume={},
+  number={},
+  pages={345-350},
+  keywords={Support vector machines;Measurement;Machine learning algorithms;Unsolicited e-mail;Clustering algorithms;Predictive models;Prediction algorithms;Email spam;Prediction;PCA;KNN;LR;SVM},
+  doi={10.1109/SmartTechCon57526.2023.10391682}}
+
+
+12.
+https://ieeexplore.ieee.org/document/7280088
+@INPROCEEDINGS{7280088,
+  author={Sharma, Amit Kumar and Yadav, Renuka},
+  booktitle={2015 Fifth International Conference on Communication Systems and Network Technologies}, 
+  title={Spam Mails Filtering Using Different Classifiers with Feature Selection and Reduction Technique}, 
+  year={2015},
+  volume={},
+  number={},
+  pages={1089-1093},
+  keywords={Principal component analysis;Bayes methods;Support vector machines;Postal services;Unsolicited electronic mail;Data mining;Component Analysis;Correlation Feature Selection;PCA;Bayesian Classifiers;SVM;J48;LMT;Stemming;TFIDF},
+  doi={10.1109/CSNT.2015.11}}
+
+
