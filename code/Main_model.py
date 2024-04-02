@@ -31,6 +31,16 @@ y_train_pca = data_reload_pca['y_train']
 y_test_pca  = data_reload_pca['y_test']
 y_val_pca   = data_reload_pca['y_val']
 
+with open('../data/processed_data/data_processed_pca_hard_ham.pkl', 'rb') as f:
+    data_reload_hard_ham_pca = pickle.load(f)
+
+X_train_hard_ham_pca = data_reload_hard_ham_pca['X_train']
+X_test_hard_ham_pca  = data_reload_hard_ham_pca['X_test']
+X_val_hard_ham_pca   = data_reload_hard_ham_pca['X_val']
+y_train_hard_ham_pca = data_reload_hard_ham_pca['y_train']
+y_test_hard_ham_pca  = data_reload_hard_ham_pca['y_test']
+y_val_hard_ham_pca   = data_reload_hard_ham_pca['y_val']
+
 # Define the baseline model(most_frequent class classifier)
 baseline_model = DummyClassifier(strategy='most_frequent')
 
@@ -115,6 +125,9 @@ workflow(SVC(), param_dist_svc, X_train, y_train, X_val, y_val, X_test, y_test)
 print("==================================")
 print("SVC: PCA processed dataset:")
 workflow(SVC(), param_dist_svc, X_train_pca, y_train_pca, X_val_pca, y_val_pca, X_test_pca, y_test_pca)
+print("==================================")
+print("SVC: PCA processed hard ham dataset:")
+workflow(SVC(), param_dist_svc, X_train_hard_ham_pca, y_train_hard_ham_pca, X_val_hard_ham_pca, y_val_hard_ham_pca, X_test_hard_ham_pca, y_test_hard_ham_pca)
 
 # Random Forest
 param_dist_rf = {
@@ -141,5 +154,8 @@ workflow(RandomForestClassifier(n_estimators=100, random_state=42), param_dist_r
 print("==================================")
 print("Random Forest: PCA processed dataset:")
 workflow(RandomForestClassifier(n_estimators=100, random_state=42), param_dist_rf, X_train_pca, y_train_pca, X_val_pca, y_val_pca, X_test_pca, y_test_pca)
+print("==================================")
+print("Random Forest: PCA processed hard ham dataset:")
+workflow(RandomForestClassifier(n_estimators=100, random_state=42), param_dist_rf, X_train_hard_ham_pca, y_train_hard_ham_pca, X_val_hard_ham_pca, y_val_hard_ham_pca, X_test_hard_ham_pca, y_test_hard_ham_pca)
 
 # Overfitting analysis

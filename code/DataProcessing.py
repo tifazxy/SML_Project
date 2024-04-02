@@ -11,7 +11,9 @@ from sklearn.model_selection import train_test_split
 # nltk.download('stopwords')
 
 spam_set_dir = '../../data/spam'
-ham_set_dir = '../../data/ham'
+# ham_set_dir = '../../data/ham'
+# hard_ham set
+ham_set_dir = '../../data/cannot_process'
 LABEL_SPAM = 1
 LABEL_HAM = 0
 
@@ -70,17 +72,25 @@ X_train_tfidf = tfidf_vectorizer.fit_transform(X_train)
 X_val_tfidf = tfidf_vectorizer.transform(X_val)
 X_test_tfidf = tfidf_vectorizer.transform(X_test)
 
+# from diminsion_reduce import function
+from sklearn.decomposition import PCA
+
+pca = PCA(n_components=20)
+X_train_pca = pca.fit_transform(X_train_tfidf.toarray())
+X_test_pca = pca.transform(X_test_tfidf.toarray())
+X_val_pca = pca.transform(X_val_tfidf.toarray())
+
 import pickle
 data = {
-    'X_train': X_train_tfidf,
-    'X_test': X_test_tfidf,
-    'X_val': X_val_tfidf,
+    'X_train': X_train_pca,
+    'X_test': X_test_pca,
+    'X_val': X_val_pca,
     'y_train': y_train,
     'y_test': y_test,
     'y_val': y_val
 }
 
-with open('../data/processed_data/data_v2.pkl', 'wb') as f:
+with open('../data/processed_data/data_processed_pca_hard_ham.pkl', 'wb') as f:
     pickle.dump(data, f)
 
 print("Data Label distribution:", len(spam_labels)/ len(labels))
