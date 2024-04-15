@@ -48,50 +48,53 @@ def read_to_str(dir, label):
                 print(f"Error reading file {filename}: {e}")
     return tokenized_emails, labels
 
-tokenized_spam_emails, spam_labels = read_to_str(spam_set_dir, LABEL_SPAM)
-tokenized_ham_emails, ham_labels = read_to_str(ham_set_dir, LABEL_HAM)
 
-# Combine spam and ham data
-tokenized_emails = tokenized_spam_emails + tokenized_ham_emails
-labels = spam_labels + ham_labels
+def __init__():
+    tokenized_spam_emails, spam_labels = read_to_str(spam_set_dir, LABEL_SPAM)
+    tokenized_ham_emails, ham_labels = read_to_str(ham_set_dir, LABEL_HAM)
 
-# From here split training, validation, testing sets. The main consideration is we don't have access of testing data before the completement of the model.
-# Same dataprocessing should do on the test sets later aftering training.
-# 70% training, 15% validation, 15% testing
-X_train, X_temp, y_train, y_temp = train_test_split(tokenized_emails, labels, test_size=0.3, random_state=42)
-X_val, X_test, y_val, y_test = train_test_split(X_temp, y_temp, test_size=0.5, random_state=42)
+    # Combine spam and ham data
+    tokenized_emails = tokenized_spam_emails + tokenized_ham_emails
+    labels = spam_labels + ham_labels
 
-print(f"Training set: {len(X_train)} samples")
-print(f"Validation set: {len(X_val)} samples")
-print(f"Testing set: {len(X_test)} samples")
+    # From here split training, validation, testing sets. The main consideration is we don't have access of testing data before the completement of the model.
+    # Same dataprocessing should do on the test sets later aftering training.
+    # 70% training, 15% validation, 15% testing
+    X_train, X_temp, y_train, y_temp = train_test_split(tokenized_emails, labels, test_size=0.3, random_state=42)
+    X_val, X_test, y_val, y_test = train_test_split(X_temp, y_temp, test_size=0.5, random_state=42)
 
-# exclude words that appear in only 4 document
-# exclude words that appear in more than 95% of the documents. [8853 rows x 98265 columns]
-tfidf_vectorizer = TfidfVectorizer(min_df=3, max_df=0.95)
-X_train_tfidf = tfidf_vectorizer.fit_transform(X_train)
-X_val_tfidf = tfidf_vectorizer.transform(X_val)
-X_test_tfidf = tfidf_vectorizer.transform(X_test)
+    print(f"Training set: {len(X_train)} samples")
+    print(f"Validation set: {len(X_val)} samples")
+    print(f"Testing set: {len(X_test)} samples")
 
-# from diminsion_reduce import function
-from sklearn.decomposition import PCA
+    # exclude words that appear in only 4 document
+    # exclude words that appear in more than 95% of the documents. [8853 rows x 98265 columns]
+    tfidf_vectorizer = TfidfVectorizer(min_df=3, max_df=0.95)
+    X_train_tfidf = tfidf_vectorizer.fit_transform(X_train)
+    X_val_tfidf = tfidf_vectorizer.transform(X_val)
+    X_test_tfidf = tfidf_vectorizer.transform(X_test)
 
-pca = PCA(n_components=20)
-X_train_pca = pca.fit_transform(X_train_tfidf.toarray())
-X_test_pca = pca.transform(X_test_tfidf.toarray())
-X_val_pca = pca.transform(X_val_tfidf.toarray())
+    # from diminsion_reduce import function
+    from sklearn.decomposition import PCA
 
-import pickle
-data = {
-    'X_train': X_train_pca,
-    'X_test': X_test_pca,
-    'X_val': X_val_pca,
-    'y_train': y_train,
-    'y_test': y_test,
-    'y_val': y_val
-}
+    pca = PCA(n_components=20)
+    X_train_pca = pca.fit_transform(X_train_tfidf.toarray())
+    X_test_pca = pca.transform(X_test_tfidf.toarray())
+    X_val_pca = pca.transform(X_val_tfidf.toarray())
 
-with open('../data/processed_data/data_processed_pca_hard_ham.pkl', 'wb') as f:
-    pickle.dump(data, f)
+    import pickle
+    data = {
+        'X_train': X_train_pca,
+        'X_test': X_test_pca,
+        'X_val': X_val_pca,
+        'y_train': y_train,
+        'y_test': y_test,
+        'y_val': y_val
+    }
 
-print("Data Label distribution:", len(spam_labels)/ len(labels))
-print("Data Label num:", len(spam_labels))
+    with open('../data/processed_data/data_processed_pca_hard_ham.pkl', 'wb') as f:
+        pickle.dump(data, f)
+
+    print("Data Label distribution:", len(spam_labels)/ len(labels))
+    print("Data Label num:", len(spam_labels))
+    # 5052+1401 1002+1398 501
